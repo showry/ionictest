@@ -1,0 +1,35 @@
+page-home {
+  ion-tabs {
+    // @include iPhone-x(); // Fixs iPhone x Issue
+    .tabbar {
+      height: 5rem;
+      .tab-button {
+        ion-icon {
+          font-size: 2em !important;
+          height: 40px !important;
+          width: 40px !important;
+          line-height: 40px !important;
+          text-align: center;
+          display: inline-block;
+          position: relative;
+          margin: 0 0 0 0 !important;
+          padding: 0 0 0 0 !important;
+          &:before {
+            font-size: 30px;
+            margin: 5px 0 !important;
+          }
+        }
+        ion-badge {
+          top: 5px !important;
+        }
+      }
+    }
+  }
+  .tabs-ios {
+    .tabbar {
+      @media only screen and (min-device-width : 375px) and (max-device-width : 812px) and (-webkit-device-pixel-ratio : 3) {
+               height: 6.8rem !important;
+             }
+    }
+  }
+}
