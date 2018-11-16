@@ -1,6 +1,10 @@
 version: 0.2
 
 phases:
+  install:
+    commands:
+      - echo installs dependencies
+      - npm install @ionic/app-scripts
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
