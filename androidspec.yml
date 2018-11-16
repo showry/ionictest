@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo installs dependencies
+      - npm install @ionic/app-scripts
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+  build:
+    commands:
+      - echo Build started on `date`
+      - ionic cordova build android
+  post_build:
+    commands:
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - ${CODEBUILD_SRC_DIR}/platforms/android/build/outputs/apk/debug/*.apk
+    discard-paths: yes
+  name: browsers-$(date +%Y-%m-%d) 
