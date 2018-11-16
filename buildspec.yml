@@ -18,4 +18,4 @@ phases:
 artifacts:
   files:
     - ${CODEBUILD_SRC_DIR}/platforms/browser/www/**/*
-  name: $(AWS_REGION)-$(date +%Y-%m-%d) 
+  name: browser-$(date +%Y-%m-%d) 
