@@ -17,6 +17,6 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - ${CODEBUILD_SRC_DIR}/platforms/android/build/outputs/apk/debug/*.apk
-    discard-paths: yes
-  name: browsers-$(date +%Y-%m-%d) 
+   - ${CODEBUILD_SRC_DIR}/platforms/android/build/outputs/apk/debug/*.apk
+  discard-paths: yes
+  name: android-$(date +%Y-%m-%d) 
