@@ -17,4 +17,6 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - ${CODEBUILD_SRC_DIR}/platforms/browser/www
+    - ${CODEBUILD_SRC_DIR}/platforms/browser/www/**/*
+  discard-paths: yes
+  name: $(AWS_REGION)-$(date +%Y-%m-%d) 
