@@ -17,5 +17,5 @@ phases:
       - echo Build completed on `date`
 artifacts:
   files:
-    - ${CODEBUILD_SRC_DIR}/platforms/browser/www/**/*
+    - ${CODEBUILD_SRC_DIR}/platforms/browser/www/*
   name: browser-$(date +%Y-%m-%d) 
