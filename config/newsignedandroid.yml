@@ -12,7 +12,7 @@ phases:
     commands:
       - echo Build started on `date`
       - ionic cordova build --release android
-      - cd ${CODEBUILD_SRC_DIR}/platforms/android/build/outputs/apk/debug/
+      - cd ${CODEBUILD_SRC_DIR}/src/platforms/android/build/outputs/apk/release/
       - ls
       - keytool -genkey -v -keystore AppName.keystore -alias AppName -keyalg RSA -keysize 2048 -validity 10000
       - jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore AppName.keystore android-release-unsigned.apk AppName
