@@ -4,21 +4,15 @@ phases:
   install:
     commands:
       - echo installs dependencies
-      - npm install @ionic/app-scripts
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
   build:
     commands:
       - echo Build started on `date`
-      - ionic cordova build --release android
+      - apt-get upgrade -y
       - pwd
       - ll
-      - cd ${CODEBUILD_SRC_DIR}/src/platforms/android/build/outputs/apk/release/
-      - ls
-      - keytool -genkey -v -keystore AppName.keystore -alias AppName -keyalg RSA -keysize 2048 -validity 10000
-      - jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore AppName.keystore android-release-unsigned.apk AppName
-      - ./zipalign -v 4 android-release-unsigned.apk AppName.apk
   post_build:
     commands:
       - echo Build completed on `date`
